@@ -1,3 +1,4 @@
+import { Movie } from '@/types';
 import { Dialog, Transition } from '@headlessui/react';
 import { useRouter } from 'next/router';
 import * as React from 'react';
@@ -5,9 +6,10 @@ import * as React from 'react';
 type Props = {
   isOpen: boolean;
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
+  movie: Movie;
 };
 
-export default function Modal({ isOpen, setIsOpen }: Props) {
+export default function Modal({ isOpen, setIsOpen, movie }: Props) {
   const router = useRouter();
   return (
     <Transition appear show={isOpen} as={React.Fragment}>
@@ -44,7 +46,7 @@ export default function Modal({ isOpen, setIsOpen }: Props) {
                   as='h3'
                   className='text-lg font-medium leading-6 text-gray-900'
                 >
-                  Product Checked Out
+                  {movie.Title}
                 </Dialog.Title>
                 <div className='mt-2'>
                   <p className='text-sm text-gray-500'>

@@ -35,6 +35,7 @@ module.exports = {
   },
 
   publicRuntimeConfig: {
-    API_URL: 'https://fakestoreapi.com',
+    API_URL: 'https://www.omdbapi.com/',
+    API_KEY: 'bb3ff48d',
   },
 };
