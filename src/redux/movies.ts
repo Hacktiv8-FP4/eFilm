@@ -3,11 +3,9 @@ import axios, { AxiosError } from 'axios';
 
 import { MovieResponse } from '@/types';
 
-type query = string;
-
 export const getSearchMovies = createAsyncThunk(
   'movies',
-  async (query: query) => {
+  async (query: string) => {
     return await axios
       .get(`https://www.omdbapi.com/?s=${query}&apikey=bb3ff48d`)
       .then((response) => response.data)

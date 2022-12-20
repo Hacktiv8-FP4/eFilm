@@ -8,7 +8,7 @@ export default function Header() {
         <div className='container mx-auto flex flex-wrap items-center justify-between pl-4'>
           <a href='' className='flex items-center'>
             <h2 className='self-center whitespace-nowrap text-xl font-semibold dark:text-white'>
-              E-Film
+              e-Film
             </h2>
           </a>
           <SearchBar />
